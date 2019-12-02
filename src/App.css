@@ -1,22 +1,23 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background: url('https://www.publicdomainpictures.net/pictures/290000/nahled/bandon-beach-at-sunset.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-link {
-  color: #09d3ac;
+.weatherInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid yellow;
+  max-width: 50vw;
+  padding: 20px;
 }
