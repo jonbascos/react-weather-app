@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import axios from 'axios'
 
 import Title from './components/Title'
 import Weather from './components/Weather'
 import Form from './components/Form'
 
-const api_key = 'bb6344f3f6338e9d64fe6215b04e9805'
+const api_key = process.env.REACT_APP_WEATHER_API_KEY;
 class App extends React.Component {
   constructor() {
     super()
@@ -37,8 +36,6 @@ class App extends React.Component {
 
   getWeather(event) {
     event.preventDefault();
-    // const city=event.target.elements.city.value;
-    // const country=event.target.elements.country.value;
 
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city},${this.state.country}&units=imperial&appid=${api_key}`)
       .then(response => response.json())
@@ -59,10 +56,6 @@ class App extends React.Component {
       
     
     }
-
-    // componentDidMount() {
-    //   this.getWeather()
-    // }
 
   render() {
     
