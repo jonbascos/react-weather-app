@@ -32,7 +32,7 @@ class App extends React.Component {
   getWeather(event) {
     event.preventDefault();
 
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city},${this.state.country}&units=imperial&appid=${api_key}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${this.state.city},${this.state.country}&units=imperial&appid=${api_key}`)
       .then(response => response.json())
       .then(data => {
         console.log(data)
