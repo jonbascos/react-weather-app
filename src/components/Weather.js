@@ -5,7 +5,7 @@ import '../App.css'
 function Weather (props) {
     return(
         <div className="weatherInfo">
-            <h2>{props.city}, {props.country}</h2>
+            <h2>{props.city}</h2>
             <p>Current Temperature: 
                 <br />
                 {props.temp}&deg; F</p>

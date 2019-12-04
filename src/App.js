@@ -23,11 +23,6 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  calCelsius(temp) {
-    let celsius = Math.floor(temp - 273.15)
-    return celsius
-  }
-
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
@@ -48,13 +43,7 @@ class App extends React.Component {
           max_temp: Math.floor(data.list[0].main.temp_max),
           conditions: data.list[0].weather[0].description,
         })
-        console.log(this.state.temp)
-        console.log(this.state.conditions)
-        console.log('from weather')
-        console.log(this.state.weather)
       })
-      
-    
     }
 
   render() {
@@ -76,6 +65,7 @@ class App extends React.Component {
           min_temp={this.state.min_temp} 
           max_temp={this.state.max_temp} 
           conditions={this.state.conditions}
+          weather={this.state.weather}
           />
       </div>
     )
